@@ -1,6 +1,4 @@
-function Hello(): string {
-	return "Hello Typescript App"
-}
+import { Hello } from "./dummy"
 
 document.addEventListener('DOMContentLoaded', event => {
 	let title = document.getElementById("title")
