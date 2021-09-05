@@ -1,11 +1,11 @@
-import { Hello } from "./dummy"
+import { Hello } from "./dummy";
 
-document.addEventListener('DOMContentLoaded', event => {
-	let title = document.getElementById("title")
+document.addEventListener("DOMContentLoaded", () => {
+	const title = document.getElementById("title");
 
 	if (title === null) {
-		return
+		return;
 	}
 
-	title.textContent = Hello()
-})
+	title.textContent = Hello();
+});
