@@ -1,31 +1,36 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const buildRoot = "build";
 const appRoot = "src";
 
 module.exports = {
 	mode: process.env.NODE_ENV || "development",
-	entry: "./src/main.ts",
+	entry: ["./src/main.ts", "./styles/app.scss"],
 	output: {
-		filename: "[name].bundle.js",
+		filename: "app.[chunkhash].js",
 		path: path.resolve(__dirname, buildRoot),
 		clean: true,
 	},
 	module: {
 		rules: [
 			{
-				test: /\.ts?$/, 
+				test: /\.ts?$/,
 				use: ["ts-loader"],
-				exclude: /node_modules/ 
+				exclude: /node_modules/,
+			},
+			{
+				test: /\.(scss|css)$/,
+				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
 			},
 		],
 	},
 	resolve: {
-		extensions: [".ts", ".js", ".json"],
+		extensions: [".ts", ".js", ".json", ".scss"],
 		alias: {
-			"$app": path.resolve(__dirname, appRoot),
-		}
+			$app: path.resolve(__dirname, appRoot),
+		},
 	},
 	// development options here
 	devtool: "inline-source-map",
@@ -38,10 +43,12 @@ module.exports = {
 		hot: false,
 	},
 	plugins: [
-
+		new MiniCssExtractPlugin({
+			filename: "app.[chunkhash].css",
+		}),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, "src/index.html"),
-			hash: true, // This is useful for cache busting
+			hash: true,
 		}),
-	]
+	],
 };

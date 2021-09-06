@@ -1,0 +1,35 @@
+:root {
+	font-size: 16px;
+	font-family: 'New Tegomin', serif;
+}
+
+html {
+	color: white;
+	background: rgb(34,193,195);
+	background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+section {
+	display: flex;
+	align-self: center;
+}
