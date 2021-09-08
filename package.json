@@ -16,6 +16,13 @@
   },
   "keywords": [
     "typescript",
+		"frontend",
+		"webpack",
+		"jasmine",
+		"test",
+		"lint",
+		"format",
+		"minimal",
     "template"
   ],
   "author": "Steffen Park <hello@istherepie.com> (https://www.istherepie.com)",
