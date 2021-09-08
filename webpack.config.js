@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const buildRoot = "build";
-const appRoot = "src";
 
 module.exports = {
 	mode: process.env.NODE_ENV || "development",
@@ -28,9 +27,6 @@ module.exports = {
 	},
 	resolve: {
 		extensions: [".ts", ".js", ".json", ".scss"],
-		alias: {
-			$app: path.resolve(__dirname, appRoot),
-		},
 	},
 	// development options here
 	devtool: "inline-source-map",
