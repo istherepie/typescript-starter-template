@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production webpack",
     "format": "prettier src/**/*.ts --write",
     "lint": "eslint src/**/*.ts",
-    "test": "jasmine-ts --config=jasmine.json",
+    "test": "jasmine-ts src/**/*.spec.ts",
     "coverage": "nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test"
   },
   "repository": {
