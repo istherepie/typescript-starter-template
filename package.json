@@ -1,5 +1,5 @@
 {
-  "name": "ts-app-template",
+  "name": "typescript-starter-template",
   "version": "0.1.0",
   "description": "A starter template for a typescript project",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/istherepie/ts-app-template.git"
+    "url": "git+https://github.com/istherepie/typescript-starter-template.git"
   },
   "keywords": [
     "typescript",
@@ -25,12 +25,12 @@
 		"minimal",
     "template"
   ],
-  "author": "Steffen Park <hello@istherepie.com> (https://www.istherepie.com)",
+  "author": "Steffen Park <dev@istherepie.com> (https://www.istherepie.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/istherepie/ts-app-template/issues"
+    "url": "https://github.com/istherepie/typescript-starter-template/issues"
   },
-  "homepage": "https://github.com/istherepie/ts-app-template#readme",
+  "homepage": "https://github.com/istherepie/typescript-starter-template#readme",
   "devDependencies": {
     "@types/jasmine": "^3.9.0",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
