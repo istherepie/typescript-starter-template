@@ -2,14 +2,12 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const buildRoot = "build";
-
 module.exports = {
 	mode: process.env.NODE_ENV || "development",
 	entry: ["./src/main.ts", "./styles/app.scss"],
 	output: {
 		filename: "app.[chunkhash].js",
-		path: path.resolve(__dirname, buildRoot),
+		path: path.resolve(__dirname, "build"),
 		clean: true,
 	},
 	module: {
@@ -31,10 +29,6 @@ module.exports = {
 	// development options here
 	devtool: "inline-source-map",
 	devServer: {
-		static: {
-			directory: path.resolve(__dirname, buildRoot),
-			watch: true,
-		},
 		historyApiFallback: true,
 		hot: false,
 	},
