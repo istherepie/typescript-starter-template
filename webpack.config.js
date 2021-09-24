@@ -2,6 +2,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+// DevServer settings
+const host = process.env.DEV_SERVER_HOST || "localhost";
+const port = process.env.DEV_SERVER_PORT || 4200;
+
 module.exports = {
 	mode: process.env.NODE_ENV || "development",
 	entry: ["./src/main.ts", "./styles/app.scss"],
@@ -31,6 +35,8 @@ module.exports = {
 	devServer: {
 		historyApiFallback: true,
 		hot: false,
+		host: host,
+		port: port,
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
