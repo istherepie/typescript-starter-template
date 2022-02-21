@@ -9,7 +9,8 @@ The toolchain is pre-configured and includes the following:
 * [Webpack](https://webpack.js.org/)
 * [Prettier](https://prettier.io/)
 * [ESLint](https://eslint.org/)
-* [Jasmine](https://jasmine.github.io/)
+* [Jest](https://jestjs.io)
+
 
 All the included configuration files have been placed in the project root for convenience, although as the project scales upwards, it may be preferrable to adjust the project layout, e.g. create seperate directories for configuration, sample data, tests etc. 
 
@@ -28,9 +29,11 @@ The current settings are as follows:
 
 ## Testing
 
-This template comes with the `Jasmine` test framework.
+This template comes with the `Jest` test framework.
 
-It is lightweight and depencency free and perfect for unit testing purposes. 
+Previously I have used jasmine because it is lightweight and depencency free.
+
+However `Jest` is more commonly used in teams and as such I always end ud replacing it straight away.
 
 For integration / end-to-end testing (or any testing where a DOM required), 
 
