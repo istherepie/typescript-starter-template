@@ -1,10 +1,16 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 
 // DevServer settings
 const host = process.env.DEV_SERVER_HOST || "localhost";
 const port = process.env.DEV_SERVER_PORT || 4200;
+
+// Manifest opts
+const manifestOpts = {
+	publicPath: "/static"
+}
 
 module.exports = {
 	mode: process.env.NODE_ENV || "development",
@@ -46,5 +52,7 @@ module.exports = {
 			template: path.resolve(__dirname, "src/index.html"),
 			hash: true,
 		}),
+
+		new WebpackManifestPlugin(manifestOpts)
 	],
 };
